@@ -4,38 +4,19 @@
 
 body {
   font-family: sans-serif;
-  margin: 20px;
+  background-color: #555555;
+  color: #fff;
+  margin: 0;
   padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   font-size: 22px;
-}
-
-h2 {
-  margin-top: 0;
-  font-size: 20px;
-}
-
-h3 {
-  margin-top: 0;
-  font-size: 18px;
-}
-
-h4 {
-  margin-top: 0;
-  font-size: 16px;
-}
-
-h5 {
-  margin-top: 0;
-  font-size: 14px;
-}
-
-h6 {
-  margin-top: 0;
-  font-size: 12px;
 }
 
 code {
@@ -46,29 +27,26 @@ ul {
   padding-inline-start: 20px;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: sans-serif;
-  margin: 20px;
-  padding: 0;
-}
-
 .square {
-  background: #fff;
-  border: 1px solid #999;
+  background: #D7E5CA;
+  border: 2px solid #99B080;
+  color: #000;
   float: left;
   font-size: 24px;
   font-weight: bold;
   line-height: 34px;
   height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
+  margin-right: -2px;
+  margin-top: -2px;
   padding: 0;
   text-align: center;
   width: 34px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.square:hover {
+  background: #79AC78;
 }
 
 .board-row:after {
@@ -79,12 +57,46 @@ body {
 
 .status {
   margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
 }
+
 .game {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.game-board {
+  margin-right: 20px;
 }
 
 .game-info {
-  margin-left: 20px;
+  text-align: left;
+}
+
+ol {
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+button {
+  background: #D2DAFF;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #8EACCD;
 }

@@ -30,12 +30,25 @@ export default function Game() {
         );
     });
 
+    const ReloadButton = () => {
+        const handleReload = () => {
+            window.location.reload();
+        };
+
+        return (
+            <button onClick={handleReload}>
+                Relancer la partie
+            </button>
+        );
+    };
+
     return (
         <div className="game">
             <div className="game-board">
                 <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
             </div>
             <div className="game-info">
+                <ReloadButton />
                 <ol>{moves}</ol>
             </div>
         </div>
@@ -59,9 +72,9 @@ function Board({ xIsNext, squares, onPlay }) {
     const winner = calculateWinner(squares);
     let status;
     if (winner) {
-        status = 'Winner: ' + winner;
+        status = 'Le joueur ' + winner + ' a gagné';
     } else {
-        status = 'Next player: ' + (xIsNext ? 'X' : 'O');
+        status = 'Prochain joueur : ' + (xIsNext ? 'X' : 'O');
     }
 
     return (
